@@ -17,7 +17,6 @@ SRC_C = \
 	printf.c \
 	system_stm32f4xx.c \
 	stm32fxxx_it.c \
-	string0.c \
 	malloc0.c \
 	systick.c  \
 	lexerstm.c \
@@ -147,7 +146,7 @@ $(BUILD)/flash1.bin: $(BUILD)/flash.elf
 	arm-none-eabi-objcopy -O binary -j .text -j .data $^ $@
 
 $(BUILD)/flash.elf: $(OBJ)
-	$(LD) $(LDFLAGS) -o $@ $(OBJ)
+	$(LD) $(LDFLAGS) -o $@ $(OBJ) -L../micromusl/build/lib -lc
 	arm-none-eabi-size $@
 
 $(BUILD):
