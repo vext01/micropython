@@ -1,3 +1,11 @@
+micromusl is a lean c library that provides minimal functionality
+to the micro python code base.  
+
+http://micropython.org
+
+Based on musl c library, the original README follows:
+
+-------------------------
 
 musl libc - a new standard library to power a new generation of
 Linux-based devices. musl is lightweight, fast, simple, free, and
